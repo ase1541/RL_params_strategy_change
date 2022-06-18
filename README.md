@@ -44,3 +44,6 @@ previously and generate all the possible combinations of these ones. After tryin
 
 7/**performance.py**: in this script lies the comparison between the RL algorithm performance and the strategy with fixed parameters.
 
+  
+  
+Trained models have been stored in the models folder, and several results are stored in the results folder as well. This code is the result of a final thesis and was develop from february 2022 to june 2022.
