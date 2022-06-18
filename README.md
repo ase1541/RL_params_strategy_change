@@ -1,8 +1,9 @@
-# RL_traiding
+# RL_trading_params_change
 
 The very AIM of this project is to build a RL Agent able to find the optimal parameters for a trading strategy called Histogram Retracement.
-Therefore, the Agent will select the parameters more suitable to maximize sharp ratio of each transaction. There are several scripts in this project:
+Therefore, the Agent will select the parameters more suitable to maximize sharp ratio of each transaction. There are several scripts in this project. There are two big groups of scripts:
 
+<ins>**Scripts related to the traiding strategy**<ins>
 1/ **main.py**: It is the general code where the general calls to the other scripts are done. Here we obtain the dataset for the stock that we want to study
 through the library invest.py.
 
@@ -31,5 +32,13 @@ Once we have described the attributes of the class, we describe the methods it h
 3/**backtesting.py**: It is mandatory to perform a study of the best suiting parameters so we can simplify the labor later performed by the RL agent, hence a 
 backtesting is performed in order to retrieve the parameters that maximize the return of the strategy. We select discrete values for each of the attributes described 
 previously and generate all the possible combinations of these ones. After trying with 5 possible options for each parameter, we end up with 4096 possible combinations
+  
+4/**statistic_analysis.py**: In this script an statistical analysis of the time series is performed.
 
-4/**Rl_algorithm.py**: Yet to be done
+<ins>**Scripts related to RL**<ins>
+5/**Rl_algo_trading**: In this script the environment class for the RL model is defined, as well as the different agents and some functions that make an easier and smoother funtioning of the next script.
+
+6/**train_RL.py**: Here happens the training and validation of the different RL models. THe result obtained is A2C as the best model and therefore, only this one is trained long enough to obtained the final results.
+
+7/**performance.py**: in this script lies the comparison between the RL algorithm performance and the strategy with fixed parameters.
+
